@@ -10,6 +10,7 @@ $( document ).ready(function() {
         width:760,
         height:400,
         space:10,
+        autoplay:true,
         loop:true,
         view:'parallaxMask',
         filters: {

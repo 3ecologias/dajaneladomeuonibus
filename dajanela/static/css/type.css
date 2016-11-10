@@ -202,9 +202,9 @@ body {
 
 h1, h2  {
     font-family:"Gotham-Medium";
-    text-rendering: optimizeLegibility;
+    /*text-rendering: optimizeLegibility;*/
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-    text-rendering: optimizeLegibility !important;
+    /*text-rendering: optimizeLegibility !important;*/
     -webkit-font-smoothing: antialiased !important;
 }
 h1 {
@@ -218,19 +218,19 @@ h2{
 
 h4  {
     font-family:"Gotham-Thin";
-    /*text-rendering: optimizeLegibility;
+    /*text-rendering: optimizeLegibility;*/
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;*/
+    /*text-rendering: optimizeLegibility !important;*/
+    -webkit-font-smoothing: antialiased !important;
 }
 
 .ms-slide-info h3 {
     color:#E8E8E8 !important;
     font-family:"Gotham-Book";
-    /*text-rendering: optimizeLegibility;
+    /*text-rendering: optimizeLegibility;*/
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;*/
+    /*text-rendering: optimizeLegibility !important;*/
+    -webkit-font-smoothing: antialiased !important;
     font-size: 2.2em !important;
     margin-top: 2em !important;
 }
@@ -243,20 +243,20 @@ h4  {
 .ms-slide-info h4 {
     font-family:"Gotham-Light";
     color:#E8E8E8 !important;
-    /*text-rendering: optimizeLegibility;
+    /*text-rendering: optimizeLegibility;*/
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;*/
+    /*text-rendering: optimizeLegibility !important;*/
+    -webkit-font-smoothing: antialiased !important;
     margin-top: 0.8em !important;
     font-size: 1.8em !important;
 }
 
 .ms-slide-info p {
     color:#E8E8E8 !important;
-    /*text-rendering: optimizeLegibility;
+    /*text-rendering: optimizeLegibility;*/
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;*/
+    /*text-rendering: optimizeLegibility !important;*/
+    -webkit-font-smoothing: antialiased !important;
     margin-top: 0.8em !important;
     font-size: 1.2em !important;
 }
@@ -264,10 +264,10 @@ h4  {
 p{
     margin: 0 0 0px;
     font-size: 3rem;
-    /*text-rendering: optimizeLegibility;
+    /*text-rendering: optimizeLegibility;*/
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;*/
+    /*text-rendering: optimizeLegibility !important;*/
+    -webkit-font-smoothing: antialiased !important;
 }
 
 .tooltip-inner {
@@ -278,11 +278,10 @@ p{
   padding:3em;
   padding-right:5em;
 }
-<<<<<<< HEAD
 
 video {
 max-width: 100%;
-=======
+
 .container2{
   text-align: justify;
   position: relative;
@@ -294,20 +293,22 @@ max-width: 100%;
 }
 
 .caption1 h3{
-  text-align: left;
+  text-align: center !important;
   font-family: "Gotham-Book";
   font-size: 1.4em;
   margin-top: 4%;
+  padding-right: 6% !important;
 }
 .caption2 h3{
-  text-align: start;
+  text-align: center !important;
   font-family: "Gotham-Book";
   font-size: 1.4em;
+  padding-right: 12% !important;
 }
 .caption3 h3{
   text-align: start;
   font-family: "Gotham-Book";
   font-size: 1.4em;
   margin-top: 4%;
->>>>>>> 26247d7114bab1903ef669840a0542a60ee78c9d
+
 }

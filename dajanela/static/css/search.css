@@ -15,7 +15,7 @@ input[type=search] {
 	font-family: "Gotham-Book";
 	font-size: 100%;
 	font-weight: bold;
-	color: #ededed !important;
+	color: #797C7D !important;
 	text-align: center;
 }
 input::-webkit-search-decoration,
@@ -43,19 +43,19 @@ input[type=search]:focus {
 	box-shadow: 0 0 5px rgba(109,207,246,.5);
 }
 input[type=search] {
-	width: 1.5em;
+	width: 2.7em;
 	padding-left: .6em;
 	color: transparent;
 	cursor: pointer;
 }
 input[type=search]:hover {
-	background-color: #eb8033;
+	background-color: #fff;
 }
 input[type=search]:focus {
 	width: 130px;
 	padding-left: 32px;
 	color: #000;
-	background-color: #eb8033;
+	background-color: #fff;
 	cursor:  auto;
 }
 /* placeholder */
