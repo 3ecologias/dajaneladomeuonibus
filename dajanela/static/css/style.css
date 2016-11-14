@@ -13,18 +13,19 @@ body {
 
 
 .bg-primary {
-    color: #fff;
+    color: #e8e8e8;
     background-color: #000;
 }
 
 .site-title {
-    width: 12vw;
-    padding: 0;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 999;
-    color:#E8E8E8;
+  width: 100%;
+  padding: 0;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 999;
+  color: #E8E8E8;
+  background-color: rgba(0 ,0 ,0 , 0.7);
 }
 
 .site-title img {
@@ -37,16 +38,13 @@ body {
 .thumbnail {
   border:none !important;
 }
-.thumbnail2{
-      margin-top: 10%;
-}
 
 /* Custom Button Styles */
 
 .fb {
     position: absolute;
     z-index: 99;
-    top: 2.6vh;
+    top: 1.35em;
     right: 3.0em;
     font-size: 90%;
 }
@@ -154,7 +152,7 @@ hr.small {
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,eb0.2);
 }
 
 .sidebar-nav li a:active,
@@ -259,10 +257,6 @@ hr.small {
 
 
 /* Call to Action */
-.call-to-action {
-    padding: 50px 0;
-}
-
 .call-to-action .btn {
     margin: 10px;
 }
@@ -295,10 +289,6 @@ footer {
   bottom: 5px;
   right: 5px;
 }
-.slide-full{
-
-
-}
 .img_janela {
     max-width: 100% !important;
     width: 100% !important;
@@ -315,6 +305,7 @@ footer {
   font-size: 1.2em !important;
    content: attr(data-title);
 }*/
+
 .news-tooltip + .tooltip > .tooltip-inner {
   width: 100%;
 }
@@ -341,6 +332,21 @@ footer {
   width: 100%;
 }
 
+.container2 a {
+  color: #000;
+}
+
+.container2 a:hover {
+  color: #eb8033;
+}
 .ms-layer a {
   color: #fff;
+}
+
+.struct {
+  max-width: 85%;
+  margin: auto;
+}
+.ms-staff-carousel .ms-staff-info {
+  min-height: 25vh !important;
 }
