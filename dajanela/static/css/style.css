@@ -29,7 +29,7 @@ body {
 }
 
 .site-title img {
-    max-width: 100%;
+    max-width: 40%;
 }
 
 .lead {
@@ -44,7 +44,7 @@ body {
 .fb {
     position: absolute;
     z-index: 99;
-    top: 1.35em;
+    top: 2.3em;
     right: 3.0em;
     font-size: 90%;
 }

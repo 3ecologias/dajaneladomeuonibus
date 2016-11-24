@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load homepage_tags %}
 {% load wagtailsettings_tags %}
+{% load static %}
 {% get_settings %}
 {% block body_class %}template-homepage{% endblock %}
 
@@ -10,7 +11,7 @@
     <header id="top" class="header">
         {% instagram_slide %}
         <div class="site-title">
-            <h1>{% block title %}{{ self.title }}{% endblock %}</h1>
+            <h1><img src="{% static 'images/logodajanelaheader.png'%}"/></h1>
             <div class="fb">
               <a target="_blank" href="https://www.instagram.com/dajaneladomeuonibus/"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
             </div>
