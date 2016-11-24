@@ -1,5 +1,7 @@
 from django import template
 from home.models import *
+from django.core.mail import EmailMessage
+from django.template.loader import get_template
 
 register = template.Library()
 
@@ -50,3 +52,13 @@ def testimonials():
  	 'testimonials' : testimonials
 
  	}
+
+@register.inclusion_tag('home/tags/footer.html')
+def footer():
+
+	footer = ContactForm
+	return{
+	 'footer' : footer
+	}
+
+

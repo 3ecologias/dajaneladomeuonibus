@@ -2,6 +2,7 @@ from __future__ import absolute_import, unicode_literals
 
 from django.db import models
 from django.utils import timezone
+from django import forms
 from wagtail.wagtailcore.models import Page
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailcore.fields import StreamField
@@ -11,6 +12,10 @@ from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.contrib.settings.models import BaseSetting, register_setting
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailsearch import index
+
+from modelcluster.fields import ParentalKey
+from wagtail.wagtailadmin.edit_handlers import (FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel)
+from wagtail.wagtailforms.models import AbstractEmailForm, AbstractFormField
 
 class HomePage(Page):
   button = models.CharField(max_length=255)
@@ -97,6 +102,7 @@ class Testimonials(Page):
         FieldPanel('name'),
         FieldPanel('instagram_user'),
     ]
+    
 
 @register_setting
 class ApiTokenInstagramSettings(BaseSetting):
@@ -172,3 +178,20 @@ class Post(models.Model, index.Indexed):
     elif self.imagem_src:
       return self.imagem_src
     return None
+
+class ContactForm(forms.Form):
+
+    name = forms.CharField(
+      required=True,
+      widget=forms.TextInput(
+        attrs={'placeholder': 'Nome *', 'id': 'name', 'class': 'form-control margin_inputs', 'type': 'text'}))
+
+    email_contact = forms.EmailField(
+      required=True,
+      widget=forms.EmailInput(
+        attrs={'placeholder': 'Email *', 'id': 'email', 'class': 'form-control margin_inputs'}))
+
+    message = forms.CharField(
+        required=True,
+        widget=forms.Textarea(attrs={'placeholder': 'Mensagem *', 'id': 'message', 'class': 'form-control margin_inputs'})
+    )

@@ -1,0 +1,30 @@
+{% load wagtailcore_tags %}
+{% load static %}
+    <footer>
+        <div class="container-full">
+            <div class="row">
+                <div class="col-xs-12 col-lg-7">
+                  <h2>#Parcerias</h2>
+                    <img class="img-responsive" src="{% static 'images/logofunculturasite.png' %}"/>
+                    <!-- IMAGENS -->
+                  <h2>Icentivo</h2>
+                  <img class="img-responsive" src="{% static 'images/logofunculturasite.png' %}"/>
+
+                </div>
+	            <div class="col-xs-12 col-lg-5">
+	              <h2>Contato</h2>
+	            	<form action="send_message/" method="POST" class="form_footer">
+	            		{% csrf_token %}
+	            		{{ footer.name }}
+	            		{{ footer.email_contact }}
+	            		{{ footer.message }}
+	            		
+	            		<input type="submit" name="Enviar mensagem" class="btn btn-primary pull-right">
+	            	</form>
+	            </div>
+	            <p class="pull-right">contato@dajaneladomeuonibus.com</p>
+	            	<!-- ICONES BOTOES REDES SOCIAIS AQUI -->
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>

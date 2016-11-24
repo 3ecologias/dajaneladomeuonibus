@@ -9,7 +9,7 @@ DEBUG = True
 SECRET_KEY = '3=wv=k%+#)hk-nrsrfgh0tqkhgtxx(b-*hg*5=2%h3@#ss3jh1'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 try:
     from .local import *

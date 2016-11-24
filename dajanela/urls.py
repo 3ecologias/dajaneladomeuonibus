@@ -8,6 +8,7 @@ from search import views as search_views
 from wagtail.wagtailadmin import urls as wagtailadmin_urls
 from wagtail.wagtailcore import urls as wagtail_urls
 from wagtail.wagtaildocs import urls as wagtaildocs_urls
+from home import views as home_view
 
 urlpatterns = [
     url(r'^django-admin/', include(admin.site.urls)),
@@ -17,7 +18,10 @@ urlpatterns = [
 
     url(r'^search/$', search_views.search, name='search'),
 
+    url(r'^send_message/$', home_view.send, name='send'),
+
     url(r'', include(wagtail_urls)),
+    
 ]
 
 

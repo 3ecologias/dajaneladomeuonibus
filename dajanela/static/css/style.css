@@ -350,3 +350,13 @@ footer {
 .ms-staff-carousel .ms-staff-info {
   min-height: 25vh !important;
 }
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  padding: 100px;
+}
+
+.margin_inputs{
+  margin: 15px;
+}
