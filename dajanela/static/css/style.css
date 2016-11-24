@@ -280,7 +280,7 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    padding: 0px 0;
 }
 
 #to-top {
@@ -359,4 +359,29 @@ footer {
 
 .margin_inputs{
   margin: 15px;
+}
+.partner{
+
+  margin-bottom: 13rem;
+}
+.contact{
+
+margin-top: 1.3em;
+font-size: 1.3em;
+margin-bottom: 1em;
+}
+
+.incentive{
+
+  margin-bottom: 0.6em;
+}
+.bot-send{
+
+  color: #fff;
+  background-color: #000;
+  width: 100%;
+}
+.midias{
+
+  color: #000 !important;
 }

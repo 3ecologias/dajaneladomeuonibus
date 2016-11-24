@@ -3,28 +3,47 @@
     <footer>
         <div class="container-full">
             <div class="row">
-                <div class="col-xs-12 col-lg-7">
-                  <h2>#Parcerias</h2>
-                    <img class="img-responsive" src="{% static 'images/logofunculturasite.png' %}"/>
-                    <!-- IMAGENS -->
-                  <h2>Icentivo</h2>
-                  <img class="img-responsive" src="{% static 'images/logofunculturasite.png' %}"/>
 
+              <div class="col-md-2 col-md-push-6">
+                    <img class="img-responsive" src="{% static 'images/logojanelafooter.png' %}"/>
+              </div>
+                
+
+              <div class="col-md-4 col-md-push-6">
+                    <h2>Contato</h2>
+                    <form action="send_message/" method="POST" class="form_footer">
+                      {% csrf_token %}
+                      {{ footer.name }}
+                      {{ footer.email_contact }}
+                      {{ footer.message }}
+                      
+                      <input type="submit" name="Enviar mensagem" class="bot-send">
+                    </form>
+                     <div class="contact">contato@dajaneladomeuonibus.com</div>
+                     <div class="midias">
+                     <a target="_blank" href="https://www.instagram.com/dajaneladomeuonibus/"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+                     <a target="_blank" href="#"> <i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                     <a target="_blank" href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                     </div>
+              </div>
+                  
+
+
+                
+              <div class="col-md-6 col-md-pull-6">
+                  <div class="partner">
+                      <h2>Parcerias</h2>
+                      <img class="img-responsive" src="{% static 'images/parceiros.png' %}"/>
+                  </div>
+                    <!-- IMAGENS -->
+                <div class="incentive">
+                  <h2>Incentivo</h2>
+                  <img class="img-responsive" src="{% static 'images/logofunculturasite.png' %}"/>
                 </div>
-	            <div class="col-xs-12 col-lg-5">
-	              <h2>Contato</h2>
-	            	<form action="send_message/" method="POST" class="form_footer">
-	            		{% csrf_token %}
-	            		{{ footer.name }}
-	            		{{ footer.email_contact }}
-	            		{{ footer.message }}
-	            		
-	            		<input type="submit" name="Enviar mensagem" class="btn btn-primary pull-right">
-	            	</form>
-	            </div>
-	            <p class="pull-right">contato@dajaneladomeuonibus.com</p>
+              </div>
+	          
 	            	<!-- ICONES BOTOES REDES SOCIAIS AQUI -->
             </div>
         </div>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+  </footer>

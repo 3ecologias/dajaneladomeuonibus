@@ -211,7 +211,7 @@ h1 {
   text-transform: uppercase;
 }
 h2{
-    font-size: 3em;
+    font-size: 2em;
     padding-bottom: 1em;
     margin-top: 0em;
 }
@@ -303,6 +303,10 @@ p{
     -webkit-font-smoothing: antialiased !important;
 }
 
+.pull-right p{
+
+  font-size: 1em !important;
+}
 .tooltip-inner {
   font-family:"Gotham-Light";
   color:#E8E8E8 !important;
