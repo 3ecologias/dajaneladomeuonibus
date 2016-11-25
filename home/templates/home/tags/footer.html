@@ -7,41 +7,52 @@
               <div class="col-md-2 col-md-push-6">
                     <img class="img-responsive" src="{% static 'images/logojanelafooter.png' %}"/>
               </div>
-                
+
 
               <div class="col-md-4 col-md-push-6">
-                    <h2>Contato</h2>
+                    <h2 class="title_contact">Fale aqui</h2>
                     <form action="send_message/" method="POST" class="form_footer">
                       {% csrf_token %}
                       {{ footer.name }}
                       {{ footer.email_contact }}
                       {{ footer.message }}
-                      
+
+
                       <input type="submit" name="Enviar mensagem" class="bot-send">
                     </form>
                      <div class="contact">contato@dajaneladomeuonibus.com</div>
                      <div class="midias">
                      <a target="_blank" href="https://www.instagram.com/dajaneladomeuonibus/"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
-                     <a target="_blank" href="#"> <i class="fa fa-facebook fa-fw fa-2x"></i></a>
-                     <a target="_blank" href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                     <a target="_blank" href="https://www.facebook.com/dajaneladomeuonibus.com"> <i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                     <a target="_blank" href="https://www.youtube.com/channel/UChp7hmau9LzD3vLB5PX_wBg"> <i class="fa fa-youtube fa-fw fa-2x"></i></a>
+                     <a target="_blank" href="https://www.twitter.com/dajanelaonibus"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
                      </div>
               </div>
-                  
 
 
-                
+
+
               <div class="col-md-6 col-md-pull-6">
                   <div class="partner">
-                      <h2>Parcerias</h2>
-                      <img class="img-responsive" src="{% static 'images/parceiros.png' %}"/>
+                      <h2>Parceria</h2>
+                      <div><a href="http://inciti.org" target="_blank"> <img class="img-responsive" src="{% static 'images/INCITI-PB.png' %}"/> </a></div>
+                      <div><a href="http://www.urbana-pe.com.br" target="_blank"> <img class="img-responsive" src="{% static 'images/urbana.png' %}"/> </a></div>
+                      <div><a href="http://3ecologias.net" target="_blank"> <img class="img-responsive" src="{% static 'images/3e.png' %}"/> </a></div>
+                      <div><a href="http://www.janelaprojetos.com.br" target="_blank"> <img class="img-responsive" src="{% static 'images/janela.jpg' %}"/> </a></div>
+                      <div><a href="http://www.fb.com/som.narural" target="_blank"> <img class="img-responsive" src="{% static 'images/rural.jpg' %}"/> </a></div>
+                      <div><a href="http://www.ameciclo.org/" target="_blank"> <img class="img-responsive" src="{% static 'images/ameciclo.jpg' %}"/> </a></div>
+                      <div><a href="http://www.bikeanjo.org" target="_blank"> <img class="img-responsive" src="{% static 'images/bike_anjo.jpg' %}"/> </a></div>
+                      <div><a href="http://www.fb.com/calcadasqueandei" target="_blank"> <img class="img-responsive" src="{% static 'images/logo-calcadas.png' %}"/> </a></div>
+                      <div><a href="http://janeswalk.org/brazil/recife" target="_blank"> <img class="img-responsive" src="{% static 'images/jwr.jpg' %}"/> </a></div>
+                      <div><a href="http://corridaamiga.org" target="_blank"> <img class="img-responsive" src="{% static 'images/corridaamiga.png' %}"/> </a></div>
                   </div>
                     <!-- IMAGENS -->
-                <div class="incentive">
+                <div class="grant">
                   <h2>Incentivo</h2>
                   <img class="img-responsive" src="{% static 'images/logofunculturasite.png' %}"/>
                 </div>
               </div>
-	          
+
 	            	<!-- ICONES BOTOES REDES SOCIAIS AQUI -->
             </div>
         </div>
