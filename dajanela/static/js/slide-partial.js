@@ -4,7 +4,7 @@ $( document ).ready(function() {
     var slider2 = new MasterSlider();
 
     slider2.control('arrows');
-    slider2.control('slideinfo',{insertTo:"#partial-view" , autohide:false, align:'bottom', size:160});
+    slider2.control('slideinfo',{insertTo:"#partial-view, .tooltip-inner" , autohide:false, align:'bottom', size:160});
     slider2.control('circletimer' , {color:"#FFFFFF" , stroke:9});
     slider2.setup('masterslider2' , {
         width:760,
@@ -12,6 +12,7 @@ $( document ).ready(function() {
         space:10,
         autoplay:true,
         loop:true,
+        overPause: true,
         view:'parallaxMask',
         filters: {
           grayscale: 1,
@@ -36,10 +37,12 @@ $( document ).ready(function() {
          HasTooltip.not(this).tooltip('hide');
          $(this).data('isShowing', "true");
          $(this).tooltip('show');
+         slider2.api.pause();
        }
        else
        {
          $(this).tooltip('hide');
+         slider2.api.resume();
        }
 
      }).tooltip({
@@ -48,5 +51,9 @@ $( document ).ready(function() {
        html: true
      });
 
+     $('.row').mouseenter(function() {
+       $('.news-tooltip').tooltip('hide');
+       slider2.api.resume();
+     });
 
 });

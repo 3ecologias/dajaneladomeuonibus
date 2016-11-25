@@ -310,6 +310,10 @@ footer {
   width: 100%;
 }
 
+.news-tooltip a {
+  width: 100%;
+  height: auto;
+}
 .tooltip {
   width: 100%;
 }
@@ -361,27 +365,74 @@ footer {
   margin: 15px;
 }
 .partner{
-
-  margin-bottom: 13rem;
+  overflow: auto;
+  display: block;
+  width: 42vw;
+  height: 35vh;
+  margin-bottom: 1em;
 }
+
+.partner > div {
+  margin: 31px 6px 20px 0px;
+  padding-left: 0px;
+  height: 5vh;
+  width: 7vw;
+  float: left;
+}
+
 .contact{
 
 margin-top: 1.3em;
 font-size: 1.3em;
 margin-bottom: 1em;
+margin-left: 1.2vw;
 }
 
-.incentive{
-
+.grant{
   margin-bottom: 0.6em;
 }
+
+.grant h2 {
+  padding-top: 1.5em;
+}
+
 .bot-send{
 
   color: #fff;
   background-color: #000;
   width: 100%;
+  margin-left: 1.1vw;
 }
 .midias{
 
   color: #000 !important;
+}
+
+::-webkit-input-placeholder {
+ font-size: 14px;
+ text-align: center;
+ font-weight: bold;
+}
+:-moz-placeholder { /* older Firefox*/
+ font-size:14px;
+ text-align: center;
+ }
+::-moz-placeholder { /* Firefox 19+ */
+ font-size: 14px;
+ text-align: center;
+ font-weight: bold;
+}
+:-ms-input-placeholder {
+ font-size: 14px;
+ text-align: center;
+ font-weight: bold;
+}
+
+.form-control {
+  text-align: center;
+}
+
+
+.title_contact {
+    margin-left: 1.2vw;
 }
