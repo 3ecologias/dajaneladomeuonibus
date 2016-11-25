@@ -102,7 +102,7 @@ class Testimonials(Page):
         FieldPanel('name'),
         FieldPanel('instagram_user'),
     ]
-    
+
 
 @register_setting
 class ApiTokenInstagramSettings(BaseSetting):
