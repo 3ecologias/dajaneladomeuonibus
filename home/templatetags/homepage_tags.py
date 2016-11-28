@@ -34,6 +34,7 @@ def news_page():
 def instagram_slide(context):
     return {
         'post': Post.objects.all(),
+        'lastest': Post.objects.all().order_by('-date')[:20],
         'request': context['request'],
     }
 
@@ -60,5 +61,3 @@ def footer():
 	return{
 	 'footer' : footer
 	}
-
-

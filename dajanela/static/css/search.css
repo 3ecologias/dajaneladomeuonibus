@@ -97,3 +97,19 @@ label{
 display: inline-block !important;
 max-width: 178px !important;
 }
+
+.ms-lightbox-template {
+	margin-top: 7em !important;
+}
+
+@media only screen and (max-device-width: 550px) {
+		label {
+			 margin-top: 5em
+			 }
+		.site-title img {
+				 max-width: 100%;
+				}
+		.fa {
+			display: none!important;
+		}
+	}
