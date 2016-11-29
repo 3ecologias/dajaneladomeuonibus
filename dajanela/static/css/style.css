@@ -352,7 +352,7 @@ footer {
   margin: auto;
 }
 .ms-staff-carousel .ms-staff-info {
-  min-height: 25vh !important;
+  min-height: 40vh !important;
 }
 
 .container-full {
@@ -368,7 +368,7 @@ footer {
   overflow: auto;
   display: block;
   width: 42vw;
-  height: 35vh;
+  height: 50vh;
   margin-bottom: 1em;
 }
 

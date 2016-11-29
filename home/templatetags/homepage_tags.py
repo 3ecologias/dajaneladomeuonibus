@@ -24,7 +24,7 @@ def participe_page():
 
 @register.inclusion_tag('home/tags/news_page.html')
 def news_page():
- 	news = News.objects.live()
+ 	news = News.objects.live().order_by('-date')
  	return {
  	 'news' : news
 
