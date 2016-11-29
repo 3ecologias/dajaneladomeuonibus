@@ -20,6 +20,8 @@ urlpatterns = [
 
     url(r'^send_message/$', home_view.send, name='send'),
 
+    url(r'^privacypolice/$', home_view.privacypolice, name='privacypolice'),
+
     url(r'', include(wagtail_urls)),
     
 ]

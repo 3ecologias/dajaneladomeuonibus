@@ -55,3 +55,6 @@ def send(request):
 			return HttpResponseRedirect('/')
  
 	return render(request, 'home/home_page.html', {})
+
+def privacypolice(request):
+	return render(request, 'home/tags/privacypolicy.htm', {})
