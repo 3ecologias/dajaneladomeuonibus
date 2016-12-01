@@ -238,7 +238,7 @@ blockquote {
   font-family:"Gotham-Book";
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   -webkit-font-smoothing: antialiased !important;
-  font-size: 2.8em !important;
+  font-size: 2em !important;
   margin-top: 1em !important;
   quotes: "\201C""\201D""\2018""\2019";
   border-left: none;
@@ -268,8 +268,8 @@ blockquote:after {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     /*text-rendering: optimizeLegibility !important;*/
     -webkit-font-smoothing: antialiased !important;
-    margin-top: 0.6em !important;
-    font-size: 1.4em !important;
+    margin-top: 0.3em !important;
+    font-size: 1em !important;
 }
 .ms-slide-info h3 {
     font-family:"Gotham-Light";

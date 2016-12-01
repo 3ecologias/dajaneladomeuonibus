@@ -3,9 +3,9 @@
 
 
 <div class="search">
-   
+ <div class="search-text">Faça o seu roteiro de viagens nas imagens</div>
     <form action="{% url 'search' %}" method="get">
-        <label>Faça o seu roteiro de viagens nas imagens</label><input type="search" placeholder="nome, cidade, pais, linha, hashtag" name="query"{% if search_query %} value="{{ search_query }}"{% endif %}>
+        <input type="search" placeholder="nome, cidade, pais, linha, hashtag" name="query"{% if search_query %} value="{{ search_query }}"{% endif %}>
       <!--  <input type="submit" value="Search" class="button">-->
     </form>
 </div>
