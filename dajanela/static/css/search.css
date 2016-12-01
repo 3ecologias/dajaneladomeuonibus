@@ -2,9 +2,14 @@
 /* reset webkit search input browser style */
 .search{
 	position: absolute;
-    top: 1.3em;
-    right: 7em;
-    z-index: 997;
+	top: 2.1em;
+	right: 7em;
+	z-index: 997;
+	display: inline-flex;
+}
+.search-text {
+	max-width: 175px;
+	margin-right: -1.2em;
 }
 input {
 	outline: none;

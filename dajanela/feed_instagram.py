@@ -33,9 +33,18 @@ def carga():
 	client_secret = 'cb86b8747fea45d9a745e95bb31110e0'
 	user_id = '1345635461'
 	api = InstagramAPI(access_token=access_token, client_secret=client_secret)
-	recent_media, next_ = api.user_recent_media(user_id=user_id, count=10)
+	recent_media, next_ = api.user_recent_media(user_id=user_id)
+	post_number = 0
 	#popular_media = api.media_popular(count=20)
+	print(next_)
+	print(recent_media)
+	while next_:
+		print('while')
+		more_media, next_ = api.user_recent_media(with_next_url=next_)
+		recent_media.extend(more_media)
+
 	for media in recent_media:
+		print('for')
 		print dir(media)
 		#print media.caption.text
 		post = Post.objects.filter(pid=media.id)
@@ -60,6 +69,9 @@ def carga():
 					imagem_src = media.get_standard_resolution_url(),
 				)
 			post.save()
+			post_number+=1
+			print("numero de posts")
+			print(post_number)
 		except Exception, e:
 			log(u"Erro ao inserir [{0}]: {1}".format(media.id, media.get_standard_resolution_url()))
 			log(e)
