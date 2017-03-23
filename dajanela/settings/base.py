@@ -23,6 +23,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 ALLOWED_HOSTS=['www.dajaneladomeuonibus.com','dajaneladomeuonibus.com']
+# ALLOWED_HOSTS=['*']
 DEBUG = False
 
 
