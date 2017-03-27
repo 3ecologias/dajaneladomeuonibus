@@ -34,14 +34,13 @@ def carga():
 	user_id = '1345635461'
 	api = InstagramAPI(access_token=access_token, client_secret=client_secret)
 	recent_media, next_ = api.user_recent_media(user_id=user_id)
-	post_number = 0
-	#popular_media = api.media_popular(count=20)
-	print(next_)
-	print(recent_media)
-	while next_:
-		print('while')
-		more_media, next_ = api.user_recent_media(with_next_url=next_)
-		recent_media.extend(more_media)
+	print recent_media
+	# post_number = 0
+	# popular_media = api.media_popular(count=10)
+	# while next_:
+	# 	print('while')
+	# 	more_media, next_ = api.user_recent_media(with_next_url=next_)
+	# 	recent_media.extend(more_media)
 
 	for media in recent_media:
 		print('for')

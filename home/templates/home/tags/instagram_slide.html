@@ -17,8 +17,8 @@
                  <a href="{{ post.link }}" target="_blank"> {{ post.texto|truncatechars:189|slice:"22:" }} </a>
                </h4>
              </div>
-            {% if post.imagem_src|truncatechars:199|slice:"-52:-48" == ".jpg" %} </p>
-             <img data-type="image" src="../../../../static/masterslider/style/blank.gif" data-src="{{ post.imagem_src }}" alt="lorem ipsum dolor sit" >
+            {% if '.jpg' in post.imagem_src %} </p>
+              <img data-type="image" src="../../../../static/masterslider/style/blank.gif" data-src="{{ post.imagem_src }}" alt="lorem ipsum dolor sit" >
             {% else %}
               <a data-type="video" href="{{ post.imagem_src }}"> </a>
             {% endif %}
