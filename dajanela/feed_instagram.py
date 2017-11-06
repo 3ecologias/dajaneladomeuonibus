@@ -14,7 +14,8 @@ from django.conf import settings
 from dajanela.settings import base
 from django.db.models import Count, Min, Sum, Avg
 from django.template.defaultfilters import slugify
-import re, json
+from datetime import datetime
+import re, json, requests
 
 
 def log(texto):
@@ -27,52 +28,39 @@ def carga():
 	log("INICIO DA ROTINA")
 	from home.models import Post
 	from home.models import ApiTokenInstagramSettings
-	from instagram.client import InstagramAPI
 	# AUTH REQUIRED
 	access_token = '1345635461.7089ef3.9bc2cfb0180741d392728cc107b432fb'
-	client_secret = 'cb86b8747fea45d9a745e95bb31110e0'
-	user_id = '1345635461'
-	api = InstagramAPI(access_token=access_token, client_secret=client_secret)
-	recent_media, next_ = api.user_recent_media(user_id=user_id)
-	print recent_media
+	url = 'https://api.instagram.com/v1/users/self/media/recent/?access_token={0}'.format(access_token)
+	recent_media = requests.get(url)
+	recent_media = recent_media.json()['data']
 	post_number = 0
-	# popular_media = api.media_popular(count=10)
-	# while next_:
-	# 	print('while')
-	# 	more_media, next_ = api.user_recent_media(with_next_url=next_)
-	# 	recent_media.extend(more_media)
 
 	for media in recent_media:
-		print('for')
-		print dir(media)
-		#print media.caption.text
-		post = Post.objects.filter(pid=media.id)
+		post = Post.objects.filter(pid=media['id'])
 
-		texto = media.caption.text if media.caption else None
+		texto = media['caption']['text'] if media['caption'] else None
 
 		try:
 			if post:
 				post = post[0]
 				post.texto = u'{0}'.format(texto)
-				post.date = media.created_time
-				post.imagem = media.get_standard_resolution_url()
-				post.imagem_src = media.get_standard_resolution_url()
+				post.date = datetime.fromtimestamp(float(media['created_time']))
+				post.imagem = media['images']['standard_resolution']['url']
+				post.imagem_src = media['images']['standard_resolution']['url']
 			else:
 				post = Post(
 					redesocial = 'INSTAGRAM',
-					pid = media.id,
+					pid = media['id'],
 					texto = u'{0}'.format(texto),
-					date = media.created_time,
-					link = media.link,
-					imagem = media.get_standard_resolution_url(),
-					imagem_src = media.get_standard_resolution_url(),
+					date = datetime.fromtimestamp(float(media['caption']['created_time'])),
+					link = media['link'],
+					imagem = media['images']['standard_resolution']['url'],
+					imagem_src = media['images']['standard_resolution']['url'],
 				)
 			post.save()
 			post_number+=1
-			print("numero de posts")
-			print(post_number)
 		except Exception, e:
-			log(u"Erro ao inserir [{0}]: {1}".format(media.id, media.get_standard_resolution_url()))
+			log(u"Erro ao inserir [{0}]: {1}".format(media['id'], media['images']['standard_resolution']['url']))
 			log(e)
 
 	# AUTH NON REQUIRED
