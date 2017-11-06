@@ -23,7 +23,7 @@ def send(request):
 
 			message = request.POST.get('message', '')
 
-            # Email the profile with the 
+            # Email the profile with the
             # contact information
 			template = get_template('home/tags/email_template.txt')
 
@@ -33,11 +33,11 @@ def send(request):
 				'message': message,
 			})
 			content = template.render(context_email)
-			
+
 			email_host = 'smtp.gmail.com'
 			email_host_user = 'juliaroberts@3ecologias.net'
 			email_host_password = 'Tatub0lana0b0la'
-			email_use_tls = True 
+			email_use_tls = True
 			email_port = 587
 
 			with get_connection(host=email_host, port=email_port, username=email_host_user, password=email_host_password,
@@ -46,14 +46,14 @@ def send(request):
 				EmailMessage(
 					"Novo contato",
 					content,
-					"3Ecologias" +'',to=
-					['admon@3ecologias.net'],
+					"dajaneladomeuonibus" +'',to=
+					['dajaneladomeuonibus@gmail.com'],
 					headers = {'Reply-To': email_contact },
 					connection=connection,
 	 			).send(fail_silently=False)
 
 			return HttpResponseRedirect('/')
- 
+
 	return render(request, 'home/home_page.html', {})
 
 def privacypolice(request):
